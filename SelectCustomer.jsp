@@ -24,7 +24,7 @@ ResultSet rs = conn.prepareStatement("select CUSTNO,CUSTNAME,PHONE from member_t
 <table border='1'>
 <% while( rs.next()) {
 	%>
-	<tr><td><%=rs.getInt("custno")%></td><td>
+	<tr><td><a href="./UpdateCustomerForm.jsp?custno=<%= rs.getInt("custno")%>"><%=rs.getInt("custno")%></td><td>
 	<%=rs.getString("custname")%></td><td>
 	<%=rs.getString("phone")%></td>
 	</tr>
